@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل الحملة - الجمعية الخيرية كافل اليتيم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- الهيدر الأساسي -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="loading">
+    <div class="logo logo-right">
+      <img src="images/logo1.png" alt="شعار 01">
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">الصفحة الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="wilaya.html">المكتب الولائي</a>
+      <a href="campaigns.html">الحملات</a>
+      <a href="projects.html">المشاريع</a>
+      <a href="local.html">المكاتب البلدية</a>
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
+      <a href="contact.html">الاتصال</a>
+    </nav>
+
+    <div class="logo logo-left">
+      <img src="images/logo2.png" alt="شعار 02">
+    </div>
+
+    <div class="mobile-controls">
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="wilaya.html">المكتب الولائي</a>
+    <a href="campaigns.html">الحملات</a>
+    <a href="projects.html">المشاريع</a>
+    <a href="local.html">المكاتب البلدية</a>
+    <a href="donate.html" class="btn-donate">ساهم معنا</a>
+    <a href="contact.html">الاتصال</a>
+  </div>
+
+  <main>
+    <section class="page-header loading">
+        <h1 id="campaign-title">تفاصيل الحملة</h1>
+    </section>
+
+    <section id="campaign-details" class="loading">
+        <div class="campaign-detail-container">
+            <!-- الصورة الرئيسية للحملة -->
+            <div class="campaign-hero">
+                <img id="detail-hero-image" src="" alt="صورة الحملة">
+            </div>
+
+            <!-- المعلومات الأساسية -->
+            <div class="campaign-basic-info">
+                <h2 id="detail-campaign-name">جاري تحميل البيانات...</h2>
+                <!-- تم إزالة قسم campaign-meta فقط -->
+                
+                <div class="campaign-description">
+                    <p id="detail-description">جاري تحميل وصف الحملة...</p>
+                </div>
+            </div>
+
+            <!-- الأهداف -->
+            <div class="campaign-objectives">
+                <h3><i class="fas fa-bullseye"></i> أهداف الحملة</h3>
+                <ul id="detail-objectives">
+                    <li>جاري تحميل الأهداف...</li>
+                </ul>
+            </div>
+
+            <!-- النتائج المحققة -->
+            <div class="campaign-results">
+                <h3><i class="fas fa-chart-line"></i> النتائج المحققة</h3>
+                
+                <!-- حالة الاتصال -->
+                <div class="connection-status" id="connectionStatus">
+                    <i class="fas fa-wifi"></i> جاري الاتصال بـ Google Sheets...
+                </div>
+                
+                <!-- نتائج هذا العام -->
+                <div class="results-section">
+                    <h4><i class="fas fa-calendar-check"></i> نتائج هذا العام 2025</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number" id="current-year-beneficiaries">NA</div>
+                            <div class="result-label">عدد المستفيدين</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number" id="current-year-percentage">NA</div>
+                            <div class="result-label">نسبة الإنجاز</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number" id="current-year-duration">NA</div>
+                            <div class="result-label">مدة الحملة (أيام)</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number" id="current-year-budget">NA</div>
+                            <div class="result-label">الميزانية (دج)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نتائج الموسم السابق -->
+                <div class="results-section">
+                    <h4><i class="fas fa-calendar-alt"></i> نتائج الموسم السابق 2024</h4>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number" id="previous-year-beneficiaries">NA</div>
+                            <div class="result-label">عدد المستفيدين</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number" id="previous-year-percentage">NA</div>
+                            <div class="result-label">نسبة الإنجاز</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number" id="previous-year-duration">NA</div>
+                            <div class="result-label">مدة الحملة (أيام)</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number" id="previous-year-budget">NA</div>
+                            <div class="result-label">الميزانية (دج)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معرض الصور -->
+            <div class="campaign-gallery">
+                <h3><i class="fas fa-images"></i> معرض الصور</h3>
+                <div class="gallery-grid" id="detail-gallery">
+                    <!-- سيتم إضافة الصور ديناميكياً -->
+                </div>
+            </div>
+
+            <!-- زر العودة والتحديث -->
+            <div class="back-to-campaigns">
+                <a href="campaigns.html" class="btn-back">
+                    <i class="fas fa-arrow-right"></i> العودة إلى قائمة الحملات
+                </a>
+                <button onclick="refreshData()" class="btn-refresh">
+                    <i class="fas fa-sync-alt"></i> تحديث البيانات من Google Sheets
+                </button>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- الفوتر الأساسي -->
+  <footer class="loading">
+    <div class="footer-line"></div>
+    <p>© 2025 الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</p>
+    <p class="design-credit">من تصميم أبناء الجمعية</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // البيانات الثابتة (للصور، الأوصاف، الأهداف)
+    const campaignsStaticData = {
+        'jahiz': {
+            title: 'حملة جهز',
+            image: 'images/campaigns/jahiz.jpg',
+            description: 'تحت شعار "محفظة لكل يتيم"، تهدف إلى توفير كافة المستلزمات المدرسية لصالح أبنائنا المتمدرسين، من أجل دعمهم طيلة مشوارهم الدراسي. تضمن الحملة توفير الكتب والقرطاسية والأدوات المدرسية، بالإضافة إلى الزي المدرسي.',
+            objectives: [
+                'توفير المستلزمات المدرسية لـ 1000 يتيم متمدرس',
+                'توزيع 1000 حقيبة مدرسية كاملة',
+                'توفير الزي المدرسي للطلاب المحتاجين',
+                'دعم الطلاب طيلة العام الدراسي'
+            ],
+            gallery: [
+                'images/campaigns/jahiz.jpg',
+                'images/campaigns/jahiz-2.jpg',
+                'images/campaigns/jahiz-3.jpg'
+            ]
+        },
+        'warm-hearts': {
+            title: 'حملة القلوب الدافئة',
+            image: 'images/campaigns/warm-hearts.jpg',
+            description: 'وهي حملة تضامنية شتوية، موجهة للأيتام والأرامل خاصة القانطين بمناطق الظل والمناطق النائية. تهدف إلى توفير الدفء في بيوتهم من خلال توزيع الأغطية، الملابس الشتوية، والسخانات.',
+            objectives: [
+                'توزيع 1000 بطانية شتوية',
+                'توفير ملابس شتوية لـ 500 طفل',
+                'توزيع 200 سخان للمنازل',
+                'تغطية المناطق النائية والفقيرة'
+            ],
+            gallery: [
+                'images/campaigns/warm-hearts.jpg',
+                'images/campaigns/warm-2.jpg',
+                'images/campaigns/warm-3.jpg'
+            ]
+        },
+        'sanabil': {
+            title: 'حملة سنابل الخير',
+            image: 'images/campaigns/sanabil.jpg',
+            description: 'وهي حملة موجهة لدعم الأرامل والأيتام بالطرود الغذائية طيلة شهر رمضان المبارك، بالإضافة إلى كسوة العيد. تهدف إلى توفير كل ما يحتاجونه من مواد أساسية لرسم البهجة على وجوههم في هذا الشهر الفضيل.',
+            objectives: [
+                'توزيع 1000 طرد غذائي',
+                'توفير كسوة العيد لـ 500 طفل',
+                'إفطار 2000 صائم يومياً',
+                'تغطية 30 منطقة محرومة'
+            ],
+            gallery: [
+                'images/campaigns/sanabil.jpg',
+                'images/campaigns/sanabil-2.jpg',
+                'images/campaigns/sanabil-3.jpg'
+            ]
+        },
+        'eid': {
+            title: 'حملة عيدنا تكافل',
+            image: 'images/campaigns/eid.jpg',
+            description: 'هي حملة تهدف إلى جمع وتوزيع الأضاحي واللحوم لفائدة أسر الأيتام خلال عيد الأضحى المبارك، مما يساهم في إدخال الفرحة عليهم ومشاركتهم بهجة العيد.',
+            objectives: [
+                'توزيع 100 أضحية كاملة',
+                'توفير لحوم الأضاحي لـ 600 أسرة',
+                'تغطية جميع المكاتب البلدية',
+                'مشاركة 1000 متطوع في التوزيع'
+            ],
+            gallery: [
+                'images/campaigns/eid.jpg',
+                'images/campaigns/eid-2.jpg',
+                'images/campaigns/eid-3.jpg'
+            ]
+        }
+    };
+
+    // دالة لتحميل البيانات من Google Sheets
+    async function loadDataFromSheets() {
+        try {
+            // 🔽 🔽 🔽 استبدل هذا الرابط برابط الجدول الخاص بك 🔽 🔽 🔽
+            const sheetId = '1DGe0dGzhlqYaX2c090xC0OWGG_2jpstbtTXxa5U2_iM'; // استبدل بـ ID جدولك الحقيقي
+            // 🔼 🔼 🔼 استبدل هذا الرابط برابط الجدول الخاص بك 🔼 🔼 🔼
+            
+            const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
+            
+            const response = await fetch(url);
+            
+            if (!response.ok) {
+                throw new Error('فشل في الاتصال بـ Google Sheets');
+            }
+            
+            const text = await response.text();
+            const json = JSON.parse(text.substr(47).slice(0, -2));
+            
+            const campaignsData = {};
+            
+            json.table.rows.forEach((row, index) => {
+                if (index > 0) { // تخطى الصف الأول (العناوين)
+                    const cells = row.c;
+                    const campaignId = cells[0]?.v;
+                    
+                    if (campaignId) {
+                        campaignsData[campaignId] = {
+                            currentYear: {
+                                beneficiaries: cells[1]?.v || 0,
+                                percentage: cells[2]?.v || 0,
+                                duration: cells[3]?.v || 0,
+                                budget: cells[4]?.v || '0'
+                            },
+                            previousYear: {
+                                beneficiaries: cells[5]?.v || 0,
+                                percentage: cells[6]?.v || 0,
+                                duration: cells[7]?.v || 0,
+                                budget: cells[8]?.v || '0'
+                            }
+                        };
+                    }
+                }
+            });
+            
+            return { success: true, data: campaignsData };
+        } catch (error) {
+            console.error('خطأ في تحميل البيانات من Google Sheets:', error);
+            return { success: false, error: error.message };
+        }
+    }
+
+    // دالة تحديث حالة الاتصال
+    function updateConnectionStatus(isConnected, message = '') {
+        const statusElement = document.getElementById('connectionStatus');
+        
+        if (isConnected) {
+            statusElement.innerHTML = '<i class="fas fa-wifi"></i> متصل بـ Google Sheets';
+            statusElement.className = 'connection-status connected';
+        } else {
+            statusElement.innerHTML = `<i class="fas fa-wifi-slash"></i> غير متصل - ${message}`;
+            statusElement.className = 'connection-status disconnected';
+        }
+    }
+
+    // دالة عرض القيم كـ "NA"
+    function showNAValues() {
+        const naElements = [
+            'current-year-beneficiaries', 'current-year-percentage', 'current-year-duration', 'current-year-budget',
+            'previous-year-beneficiaries', 'previous-year-percentage', 'previous-year-duration', 'previous-year-budget'
+        ];
+        
+        naElements.forEach(id => {
+            document.getElementById(id).textContent = 'NA';
+        });
+    }
+
+    // دالة تحديث واجهة المستخدم
+    function updateUI(sheetsResult, campaignId) {
+        const staticData = campaignsStaticData[campaignId];
+        
+        if (!staticData) {
+            document.getElementById('campaign-title').textContent = 'الحملة غير موجودة';
+            document.getElementById('detail-campaign-name').textContent = 'الحملة غير موجودة';
+            document.getElementById('detail-description').textContent = 'عذراً، لم يتم العثور على الحملة المطلوبة.';
+            return;
+        }
+
+        // تحديث البيانات الثابتة
+        document.title = `${staticData.title} - الجمعية الخيرية كافل اليتيم`;
+        document.getElementById('campaign-title').textContent = staticData.title;
+        document.getElementById('detail-campaign-name').textContent = staticData.title;
+        document.getElementById('detail-hero-image').src = staticData.image;
+        document.getElementById('detail-hero-image').alt = staticData.title;
+        document.getElementById('detail-description').textContent = staticData.description;
+        
+        // تحديث الأهداف
+        const objectivesList = document.getElementById('detail-objectives');
+        objectivesList.innerHTML = '';
+        staticData.objectives.forEach(goal => {
+            const li = document.createElement('li');
+            li.textContent = goal;
+            objectivesList.appendChild(li);
+        });
+        
+        // تحديث معرض الصور
+        const gallery = document.getElementById('detail-gallery');
+        gallery.innerHTML = '';
+        staticData.gallery.forEach((imageSrc, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            galleryItem.innerHTML = `
+                <img src="${imageSrc}" alt="${staticData.title} - صورة ${index + 1}">
+            `;
+            gallery.appendChild(galleryItem);
+        });
+
+        // تحديث البيانات من Google Sheets أو عرض NA
+        if (sheetsResult.success && sheetsResult.data[campaignId]) {
+            const sheetData = sheetsResult.data[campaignId];
+            
+            // تحديث نتائج هذا العام
+            document.getElementById('current-year-beneficiaries').textContent = 
+                sheetData.currentYear.beneficiaries.toLocaleString();
+            document.getElementById('current-year-percentage').textContent = 
+                sheetData.currentYear.percentage + '%';
+            document.getElementById('current-year-duration').textContent = 
+                sheetData.currentYear.duration;
+            document.getElementById('current-year-budget').textContent = 
+                sheetData.currentYear.budget;
+            
+            // تحديث نتائج الموسم السابق
+            document.getElementById('previous-year-beneficiaries').textContent = 
+                sheetData.previousYear.beneficiaries.toLocaleString();
+            document.getElementById('previous-year-percentage').textContent = 
+                sheetData.previousYear.percentage + '%';
+            document.getElementById('previous-year-duration').textContent = 
+                sheetData.previousYear.duration;
+            document.getElementById('previous-year-budget').textContent = 
+                sheetData.previousYear.budget;
+            
+            updateConnectionStatus(true);
+        } else {
+            showNAValues();
+            updateConnectionStatus(false, sheetsResult.error || 'لا توجد بيانات متاحة');
+        }
+    }
+
+    // دالة تحديث البيانات
+    async function refreshData() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const campaignId = urlParams.get('campaign');
+        
+        if (campaignId) {
+            updateConnectionStatus(false, 'جاري تحديث البيانات...');
+            
+            const sheetsResult = await loadDataFromSheets();
+            updateUI(sheetsResult, campaignId);
+            
+            if (sheetsResult.success) {
+                alert('✅ تم تحديث البيانات بنجاح من Google Sheets!');
+            } else {
+                alert('⚠️ لم يتمكن من الاتصال بـ Google Sheets. يتم عرض البيانات المحلية.');
+            }
+        }
+    }
+
+    // تحميل البيانات عند فتح الصفحة
+    document.addEventListener('DOMContentLoaded', async function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const campaignId = urlParams.get('campaign');
+        
+        if (campaignId) {
+            // عرض NA مؤقتاً أثناء التحميل
+            showNAValues();
+            updateConnectionStatus(false, 'جاري الاتصال...');
+            
+            const sheetsResult = await loadDataFromSheets();
+            updateUI(sheetsResult, campaignId);
+        }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المشروع - الجمعية الخيرية كافل اليتيم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <header class="loading">
+    <div class="logo logo-right">
+      <img src="images/logo1.png" alt="شعار 01">
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">الصفحة الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="wilaya.html">المكتب الولائي</a>
+      <a href="campaigns.html">الحملات</a>
+      <a href="projects.html">المشاريع</a>
+      <a href="local.html">المكاتب البلدية</a>
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
+      <a href="contact.html">الاتصال</a>
+    </nav>
+
+    <div class="logo logo-left">
+      <img src="images/logo2.png" alt="شعار 02">
+    </div>
+
+    <div class="mobile-controls">
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="wilaya.html">المكتب الولائي</a>
+    <a href="campaigns.html">الحملات</a>
+    <a href="projects.html">المشاريع</a>
+    <a href="local.html">المكاتب البلدية</a>
+    <a href="donate.html" class="btn-donate">ساهم معنا</a>
+    <a href="contact.html">الاتصال</a>
+  </div>
+
+  <main>
+    <section class="page-header loading">
+        <h1 id="project-title">تفاصيل المشروع</h1>
+    </section>
+
+    <section id="project-details" class="loading">
+        <div class="project-detail-container">
+            <!-- الأيقونة أو الصورة الرئيسية -->
+            <div class="project-hero">
+                <div id="project-icon" class="project-icon-large">
+                    <!-- سيتم تعبئتها بالجافاسكريبت -->
+                </div>
+            </div>
+
+            <!-- المعلومات الأساسية -->
+            <div class="project-basic-info">
+                <h2 id="detail-project-name">جاري تحميل البيانات...</h2>
+                
+                <div class="project-description">
+                    <p id="detail-description">جاري تحميل وصف المشروع...</p>
+                </div>
+            </div>
+
+            <!-- أهداف المشروع -->
+            <div class="project-objectives">
+                <h3><i class="fas fa-bullseye"></i> أهداف المشروع</h3>
+                <ul id="detail-objectives">
+                    <li>جاري تحميل الأهداف...</li>
+                </ul>
+            </div>
+
+            <!-- الفئات المستفيدة -->
+            <div class="project-beneficiaries">
+                <h3><i class="fas fa-users"></i> الفئات المستفيدة</h3>
+                <ul id="detail-beneficiaries">
+                    <li>جاري تحميل الفئات...</li>
+                </ul>
+            </div>
+
+            <!-- آلية العمل -->
+            <div class="project-mechanism">
+                <h3><i class="fas fa-cogs"></i> آلية العمل</h3>
+                <div id="detail-mechanism">
+                    <p>جاري تحميل آلية العمل...</p>
+                </div>
+            </div>
+
+            <!-- معرض الصور -->
+            <div class="project-gallery">
+                <h3><i class="fas fa-images"></i> معرض الصور</h3>
+                <div class="gallery-grid" id="detail-gallery">
+                    <!-- سيتم إضافة الصور ديناميكياً -->
+                </div>
+            </div>
+
+            <!-- زر العودة -->
+            <div class="back-to-projects">
+                <a href="projects.html" class="btn-back">
+                    <i class="fas fa-arrow-right"></i> العودة إلى قائمة المشاريع
+                </a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="loading">
+    <div class="footer-line"></div>
+    <p>© 2025 الجمعية الخيرية كافل اليتيم الوطنية - المكتب الولائي سطيف</p>
+    <p class="design-credit">من تصميم أبناء الجمعية</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // بيانات المشاريع الكاملة
+    const projectsData = {
+        'sponsorship': {
+            title: 'مشروع الكفالة',
+            icon: '<i class="fas fa-hand-holding-heart"></i>',
+            description: 'يهدف هذا المشروع إلى توفير كفالة شهرية للأيتام والأسر المحتاجة، لضمان حياة كريمة لهم وتلبية احتياجاتهم الأساسية من غذاء، كساء، وتعليم. يتم توزيع الكفالات بشكل دوري مع متابعة مستمرة للأسر المستفيدة.',
+            objectives: [
+                'توفير دعم مالي شهري للأيتام والأسر المحتاجة',
+                'ضمان تلبية الاحتياجات الأساسية (غذاء، كساء، تعليم)',
+                'متابعة مستمرة للأسر المستفيدة وتقييم احتياجاتهم',
+                'تحسين المستوى المعيشي للأيتام والأسر المحرومة'
+            ],
+            beneficiaries: [
+                'الأيتام من جميع الفئات العمرية',
+                'الأسر المحتاجة ذات الدخل المحدود',
+                'الأرامل والمطلقات',
+                'ذوي الاحتياجات الخاصة من الأيتام'
+            ],
+            mechanism: `
+                <p>تعمل آلية المشروع على النحو التالي:</p>
+                <ul>
+                    <li>تسجيل الأسر المستفيدة بعد دراسة وضعهم الاجتماعي والاقتصادي</li>
+                    <li>تحديد قيمة الكفالة المناسبة حسب عدد أفراد الأسرة واحتياجاتهم</li>
+                    <li>توزيع الكفالات بشكل شهري من خلال المكاتب البلدية</li>
+                    <li>متابعة دورية من قبل فريق العمل الاجتماعي</li>
+                    <li>تقييم نصف سنوي لمدى تطور الأوضاع المعيشية</li>
+                </ul>
+            `,
+            gallery: [
+                'images/projects/sponsorship1.jpg',
+                'images/projects/sponsorship2.jpg',
+                'images/projects/sponsorship3.jpg'
+            ]
+        },
+        'school-support': {
+            title: 'مشروع الدعم المدرسي',
+            icon: '<i class="fas fa-graduation-cap"></i>',
+            description: 'يشمل توفير الدعم الأكاديمي للطلاب الأيتام من خلال دورات تقوية، ورش عمل، وتوفير الكتب والمستلزمات الدراسية، لضمان استمرارهم في تعليمهم وتحسين مستواهم الأكاديمي.',
+            objectives: [
+                'تحسين المستوى الأكاديمي للطلاب الأيتام',
+                'توفير المستلزمات الدراسية والكتب المدرسية',
+                'تنظيم دورات تقوية في المواد الأساسية',
+                'اكتشاف المواهب والقدرات لدى الطلاب'
+            ],
+            beneficiaries: [
+                'الطلاب الأيتام في المراحل التعليمية المختلفة',
+                'طلاب الشهادات (البكالوريا، المتوسط)',
+                'الطلاب ذوي الصعوبات التعليمية',
+                'المتفوقين دراسياً من الأيتام'
+            ],
+            mechanism: `
+                <p>آلية العمل في مشروع الدعم المدرسي:</p>
+                <ul>
+                    <li>تسجيل الطلاب الأيتام في البرنامج حسب المرحلة الدراسية</li>
+                    <li>توفير الحقيبة المدرسية الكاملة مع جميع المستلزمات</li>
+                    <li>تنظيم دورات تقوية أسبوعية في المواد الأساسية</li>
+                    <li>ورش عمل لتنمية المهارات والقدرات</li>
+                    <li>مكافأة الطلاب المتفوقين وتشجيعهم على الاستمرار</li>
+                </ul>
+            `,
+            gallery: [
+                'images/projects/school1.jpg',
+                'images/projects/school2.jpg',
+                'images/projects/school3.jpg'
+            ]
+        },
+        'hope-club': {
+            title: 'نادي صناع الأمل',
+            icon: '<div class="hope-makers-logo-container"><img src="images/hope-makers-logo.jpg" alt="نادي صناع الأمل" class="hope-makers-logo"></div>',
+            description: 'نادي يهدف إلى تمكين الأيتام الشباب من خلال ورش العمل، والدورات التدريبية، والأنشطة الإبداعية لتطوير مهاراتهم القيادية والفنية، وإعدادهم ليكونوا أعضاء فاعلين في المجتمع.',
+            objectives: [
+                'تنمية المهارات القيادية لدى الشباب الأيتام',
+                'اكتشاف المواهب الفنية والإبداعية',
+                'تطوير المهارات الحياتية والمهنية',
+                'بناء شخصيات مستقلة وقادرة على العطاء'
+            ],
+            beneficiaries: [
+                'الأيتام الشباب (15-25 سنة)',
+                'طلاب الجامعات والمعاهد من الأيتام',
+                'الموهوبين في المجالات الفنية والإبداعية',
+                'القادة الشباب من فئة الأيتام'
+            ],
+            mechanism: `
+                <p>آلية عمل نادي صناع الأمل:</p>
+                <ul>
+                    <li>انضمام الشباب الأيتام للنادي حسب اهتماماتهم</li>
+                    <li>تنظيم ورش عمل أسبوعية في مختلف المجالات</li>
+                    <li>دورات تدريبية في المهارات القيادية والحياتية</li>
+                    <li>أنشطة ترفيهية وإبداعية لتنمية المواهب</li>
+                    <li>مشاركة في الفعاليات المجتمعية والتطوعية</li>
+                </ul>
+            `,
+            gallery: [
+                'images/projects/hope1.jpg',
+                'images/projects/hope2.jpg',
+                'images/projects/hope3.jpg'
+            ]
+        }
+        // يمكن إضافة باقي المشاريع بنفس الطريقة
+    };
+
+    // دالة تحديث واجهة المستخدم
+    function updateUI(projectId) {
+        const projectData = projectsData[projectId];
+        
+        if (!projectData) {
+            document.getElementById('project-title').textContent = 'المشروع غير موجود';
+            document.getElementById('detail-project-name').textContent = 'المشروع غير موجود';
+            document.getElementById('detail-description').textContent = 'عذراً، لم يتم العثور على المشروع المطلوب.';
+            return;
+        }
+
+        // تحديث البيانات
+        document.title = `${projectData.title} - الجمعية الخيرية كافل اليتيم`;
+        document.getElementById('project-title').textContent = projectData.title;
+        document.getElementById('detail-project-name').textContent = projectData.title;
+        document.getElementById('project-icon').innerHTML = projectData.icon;
+        document.getElementById('detail-description').textContent = projectData.description;
+        
+        // تحديث الأهداف
+        const objectivesList = document.getElementById('detail-objectives');
+        objectivesList.innerHTML = '';
+        projectData.objectives.forEach(goal => {
+            const li = document.createElement('li');
+            li.textContent = goal;
+            objectivesList.appendChild(li);
+        });
+        
+        // تحديث الفئات المستفيدة
+        const beneficiariesList = document.getElementById('detail-beneficiaries');
+        beneficiariesList.innerHTML = '';
+        projectData.beneficiaries.forEach(beneficiary => {
+            const li = document.createElement('li');
+            li.textContent = beneficiary;
+            beneficiariesList.appendChild(li);
+        });
+        
+        // تحديث آلية العمل
+        document.getElementById('detail-mechanism').innerHTML = projectData.mechanism;
+        
+        // تحديث معرض الصور
+        const gallery = document.getElementById('detail-gallery');
+        gallery.innerHTML = '';
+        projectData.gallery.forEach((imageSrc, index) => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            galleryItem.innerHTML = `
+                <img src="${imageSrc}" alt="${projectData.title} - صورة ${index + 1}">
+            `;
+            gallery.appendChild(galleryItem);
+        });
+    }
+
+    // تحميل البيانات عند فتح الصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('project');
+        
+        if (projectId) {
+            updateUI(projectId);
+        }
+    });
+  </script>
+</body>
+</html>
