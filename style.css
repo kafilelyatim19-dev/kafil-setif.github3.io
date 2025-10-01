@@ -13,7 +13,7 @@
   --border-radius: 12px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+html {scroll-behavior: smooth;}
 * {
   margin: 0;
   padding: 0;
@@ -1177,10 +1177,11 @@ footer {
 /* صفحة الاتصال */
 .contact-section {
     background: var(--white);
-    padding: 40px;
+    padding: 20px !important;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    margin-top: 40px;
+    margin: 20px auto !important;
+    width: 70%;
 }
 
 .contact-section h3 {
@@ -1221,7 +1222,7 @@ footer {
 }
 
 /* تجاوب الأجهزة للمربعين */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1294,7 +1295,7 @@ footer {
 }
 
 /* تجاوب الأجهزة */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
   }

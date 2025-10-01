@@ -33,10 +33,10 @@
     </div>
 
     <div class="mobile-controls">
-      <a href="donate.html" class="btn-donate">ساهم معنا</a>
       <button class="menu-toggle" id="menuToggle">
         <i class="fas fa-bars"></i>
       </button>
+      <a href="donate.html" class="btn-donate">ساهم معنا</a>
     </div>
   </header>
 
@@ -87,12 +87,6 @@
             <!-- النتائج المحققة -->
             <div class="campaign-results">
                 <h3><i class="fas fa-chart-line"></i> النتائج المحققة</h3>
-                
-                <!-- حالة الاتصال -->
-                <div class="connection-status" id="connectionStatus">
-                    <i class="fas fa-wifi"></i> جاري الاتصال بـ Google Sheets...
-                </div>
-                
                 <!-- نتائج هذا العام -->
                 <div class="results-section">
                     <h4><i class="fas fa-calendar-check"></i> نتائج هذا العام 2025</h4>
@@ -153,9 +147,6 @@
                 <a href="campaigns.html" class="btn-back">
                     <i class="fas fa-arrow-right"></i> العودة إلى قائمة الحملات
                 </a>
-                <button onclick="refreshData()" class="btn-refresh">
-                    <i class="fas fa-sync-alt"></i> تحديث البيانات من Google Sheets
-                </button>
             </div>
         </div>
     </section>
@@ -238,57 +229,6 @@
             ]
         }
     };
-
-    // دالة لتحميل البيانات من Google Sheets
-    async function loadDataFromSheets() {
-        try {
-            // 🔽 🔽 🔽 استبدل هذا الرابط برابط الجدول الخاص بك 🔽 🔽 🔽
-            const sheetId = '1DGe0dGzhlqYaX2c090xC0OWGG_2jpstbtTXxa5U2_iM'; // استبدل بـ ID جدولك الحقيقي
-            // 🔼 🔼 🔼 استبدل هذا الرابط برابط الجدول الخاص بك 🔼 🔼 🔼
-            
-            const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
-            
-            const response = await fetch(url);
-            
-            if (!response.ok) {
-                throw new Error('فشل في الاتصال بـ Google Sheets');
-            }
-            
-            const text = await response.text();
-            const json = JSON.parse(text.substr(47).slice(0, -2));
-            
-            const campaignsData = {};
-            
-            json.table.rows.forEach((row, index) => {
-                if (index > 0) { // تخطى الصف الأول (العناوين)
-                    const cells = row.c;
-                    const campaignId = cells[0]?.v;
-                    
-                    if (campaignId) {
-                        campaignsData[campaignId] = {
-                            currentYear: {
-                                beneficiaries: cells[1]?.v || 0,
-                                percentage: cells[2]?.v || 0,
-                                duration: cells[3]?.v || 0,
-                                budget: cells[4]?.v || '0'
-                            },
-                            previousYear: {
-                                beneficiaries: cells[5]?.v || 0,
-                                percentage: cells[6]?.v || 0,
-                                duration: cells[7]?.v || 0,
-                                budget: cells[8]?.v || '0'
-                            }
-                        };
-                    }
-                }
-            });
-            
-            return { success: true, data: campaignsData };
-        } catch (error) {
-            console.error('خطأ في تحميل البيانات من Google Sheets:', error);
-            return { success: false, error: error.message };
-        }
-    }
 
     // دالة تحديث حالة الاتصال
     function updateConnectionStatus(isConnected, message = '') {
